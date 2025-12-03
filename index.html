@@ -879,64 +879,68 @@ td p .badge-count {
 </div>
 </div>
 <div class="section-wrapper">
-<div class="section-title"><p>생산성 지표</p></div>
-<div class="prod-cards">
-<div class="prod-card">
-<div class="prod-info">
-<p class="prod-label">팀 CPD</p>
-<p class="prod-val">27건</p>
+  <!-- 제목 + 우측 필터 -->
+  <div class="section-header">
+    <div class="section-title"><p>생산성 지표</p></div>
+    <div class="filter-btn-group">
+      <button class="filter-btn active"><p>주별</p></button>
+      <button class="filter-btn"><p>월별</p></button>
+    </div>
+  </div>
+
+  <!-- 카드 4개 영역 (그대로) -->
+  <div class="prod-cards">
+    <div class="prod-card">
+      <div class="prod-info">
+        <p class="prod-label">팀 CPD</p>
+        <p class="prod-val">27건</p>
+      </div>
+      <p class="prod-trend trend-up">↑ 3.8%</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-info">
+        <p class="prod-label">팀 WPD</p>
+        <p class="prod-val">79건</p>
+      </div>
+      <p class="prod-trend trend-up">↑ 5.3%</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-info">
+        <p class="prod-label">개인 CPD</p>
+        <p class="prod-val">42건</p>
+      </div>
+      <p class="prod-trend trend-down">↓ 4.5%</p>
+    </div>
+    <div class="prod-card">
+      <div class="prod-info">
+        <p class="prod-label">개인 WPD</p>
+        <p class="prod-val">59건</p>
+      </div>
+      <p class="prod-trend trend-up">↑ 1.7%</p>
+    </div>
+  </div>
+
+  <!-- 팀/개인 차트 영역 (필터 제거 버전) -->
+  <div class="prod-charts">
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <p class="chart-title-small">팀 생산성</p>
+      </div>
+      <div class="chart-container-small">
+        <canvas id="teamProdChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-header">
+        <p class="chart-title-small">개인 생산성</p>
+      </div>
+      <div class="chart-container-small">
+        <canvas id="personalProdChart"></canvas>
+      </div>
+    </div>
+  </div>
 </div>
-<p class="prod-trend trend-up">↑ 3.8%</p>
-</div>
-<div class="prod-card">
-<div class="prod-info">
-<p class="prod-label">팀 WPD</p>
-<p class="prod-val">79건</p>
-</div>
-<p class="prod-trend trend-up">↑ 5.3%</p>
-</div>
-<div class="prod-card">
-<div class="prod-info">
-<p class="prod-label">개인 CPD</p>
-<p class="prod-val">42건</p>
-</div>
-<p class="prod-trend trend-down">↓ 4.5%</p>
-</div>
-<div class="prod-card">
-<div class="prod-info">
-<p class="prod-label">개인 WPD</p>
-<p class="prod-val">59건</p>
-</div>
-<p class="prod-trend trend-up">↑ 1.7%</p>
-</div>
-</div>
-<div class="prod-charts">
-<div class="chart-card">
-<div class="chart-card-header">
-<p class="chart-title-small">팀 생산성</p>
-<div class="filter-btn-group">
-<button class="filter-btn active"><p>주별</p></button>
-<button class="filter-btn"><p>월별</p></button>
-</div>
-</div>
-<div class="chart-container-small">
-<canvas id="teamProdChart"></canvas>
-</div>
-</div>
-<div class="chart-card">
-<div class="chart-card-header">
-<p class="chart-title-small">개인 생산성</p>
-<div class="filter-btn-group">
-<button class="filter-btn active"><p>주별</p></button>
-<button class="filter-btn"><p>월별</p></button>
-</div>
-</div>
-<div class="chart-container-small">
-<canvas id="personalProdChart"></canvas>
-</div>
-</div>
-</div>
-</div>
+
 </main>
 </div>
 </div>
